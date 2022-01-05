@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Feature-Platform" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd" fill-opacity="0.6">
+        <g id="FEATURE-MGMT-LIST" transform="translate(-426.000000, -174.000000)" fill="currentColor" fill-rule="nonzero">
+            <path d="M432.302222,185.191111 L433.555556,186.444444 L438,182 L433.555556,177.555556 L432.302222,178.808889 L434.595556,181.111111 L426,181.111111 L426,182.888889 L434.595556,182.888889 L432.302222,185.191111 Z M440.222222,174 L427.777778,174 C426.791111,174 426,174.8 426,175.777778 L426,179.333333 L427.777778,179.333333 L427.777778,175.777778 L440.222222,175.777778 L440.222222,188.222222 L427.777778,188.222222 L427.777778,184.666667 L426,184.666667 L426,188.222222 C426,189.2 426.791111,190 427.777778,190 L440.222222,190 C441.2,190 442,189.2 442,188.222222 L442,175.777778 C442,174.8 441.2,174 440.222222,174 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,144 @@
+// All the below colors can be referred from this url:
+// https://www.figma.com/file/dhs3CpAKRqBzERO09zQtg7/Color-Palette%EF%BC%88Beta%EF%BC%89?node-id=36%3A0
+$COLOR_PALETTE: (
+    'primary': (
+        'blue': (
+            '100': #B3D9FF,
+            '300': #4DA5FE,
+            '500': #007FFE,
+            '700': #006CFE,
+            '900': #004FFD
+        ),
+        'green': (
+            '100': #C0EBC5,
+            '300': #65D267,
+            '500': #34C857,
+            '700': #00AE2A,
+            '900': #008A0B
+        ),
+        'gray': (
+            '10': #F4F4F4,
+            '50': #E0E0E0,
+            '100': #C6C6C6,
+            '300': #8D8D8D,
+            '500': #525252,
+            '700': #393939,
+            '900': #262626,
+            'white': #FFFFFF,
+            'black': #000000
+        ),
+    ),
+    'secondary': (
+        'purple': (
+            '100': #D1C4E9,
+            '300': #9575CD,
+            '500': #673AB7,
+            '700': #5509A0,
+            '900': #2F006B
+        ),
+        'deep-blue': (
+            '100': #C5CAE9,
+            '300': #7986CB,
+            '500': #3F51B5,
+            '700': #2134AA,
+            '900': #0F197D
+        ),
+        'bright-blue': (
+            '100': #B3E5FC,
+            '300': #4FC3F7,
+            '500': #03A9F4,
+            '700': #0288D1,
+            '900': #01579B
+        ),
+        'cyan': (
+            '100': #B2EBF2,
+            '300': #4DD0E1,
+            '500': #01BCD4,
+            '700': #0097A7,
+            '900': #006064
+        ),
+        'teal': (
+            '100': #B2DFDB,
+            '300': #4DB6AC,
+            '500': #009688,
+            '700': #00796B,
+            '900': #004F40
+        ),
+        'bright-green': (
+            '100': #DCEDC8,
+            '300': #AED581,
+            '500': #8BC34A,
+            '700': #689F38,
+            '900': #33691E
+        ),
+        'bright-yellow': (
+            '100': #FFF9C4,
+            '300': #FFF176,
+            '500': #FFEB3B,
+            '700': #F0D800,
+            '900': #E9B500
+        ),
+    ),
+    'background-color': (
+        '100': #F4F6F9,
+        '200': #D2D8E7,
+        '300': #8496BE,
+        '400': #6279AC,
+        '500': #52689B,
+        '600': #39496D,
+        '700': #243042,
+        '800': #1D2537,
+        '900': #0F172A
+    ),
+    'alert-chart': (
+        'red': (
+            '100': #F5C0BC,
+            '300': #E86D64,
+            '500': #DE2E21,
+            '700': #A50A00,
+            '900': #600400
+        ),
+        'orange': (
+            '100': #FFDABF,
+            '300': #FFA86B,
+            '500': #FF832B,
+            '700': #E66100,
+            '900': #9F4300
+        ),
+        'yellow': (
+            '100': #FEF1C4,
+            '300': #FEDF76,
+            '500': #FDD13B,
+            '700': #FEBC00,
+            '900': #D79300
+        ),
+        'deep-green': (
+            '100': #BDE3C8,
+            '300': #66BD7F,
+            '500': #24A148,
+            '700': #007D1F,
+            '900': #005A12
+        ),
+    )
+);
+
+@function get-color($section, $color, $tone, $opacity: 1) {
+    @if map-has-key($COLOR_PALETTE, $section) {
+        $section: map-get($COLOR_PALETTE, $section);
+
+        @if map-has-key($section, $color) {
+            $color: map-get($section, $color);
+
+            @if map-has-key($color, $tone) {
+                $tone: map-get($color, $tone);
+                @return rgba(red($tone), green($tone), blue($tone), $opacity);
+            }
+            @warn "unknown tone `#{$tone}` in color";
+            @return null;
+        }
+        @warn "unknown color `#{$color}` in section";
+        @return null;
+    }
+    @warn "unknown section `#{$section}` in color palette";
+    @return null;
+}

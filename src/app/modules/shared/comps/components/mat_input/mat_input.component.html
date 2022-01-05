@@ -1,0 +1,36 @@
+<div [ngClass]="{'disabled': disabled}">
+    <form class="mat_input_form" *ngIf="type==='number' || type==='time' || type=='text' || type=='string' || type=='textarea' || type==='list' || type==='password'">
+        <mat-form-field class="full-width" >
+            <input autocomplete="off" *ngIf="type==='time'" matInput type="time" step="1" [placeholder]="placeholder" [formControl]="myControl" [readonly]="readonly" (blur)="onInputBlur()">
+            <input
+                autocomplete="off"
+                *ngIf="type==='number' && !(min==null && max==null)"
+                matInput
+                [min]="min==null? undefined : min"
+                [max]="max==null? undefined : max"
+                [step]="step==null? undefined : step"
+                type="number"
+                [placeholder]="placeholder"
+                [formControl]="myControl"
+                [readonly]="readonly"
+                oninput="this.value= (this.value<Number(this.min)?this.min:(this.value> Number(this.max)?this.max:this.value))"
+                (blur)="onInputBlur()"
+                (wheel)="$event.preventDefault()"
+                >
+            <input autocomplete="off" *ngIf="type==='number' && (min==null && max==null)" matInput type="number" [placeholder]="placeholder" [formControl]="myControl" [readonly]="readonly" (blur)="onInputBlur()" (wheel)="$event.preventDefault()">
+            <input autocomplete="off" *ngIf="type=='text' || type=='string'" maxlength={{maxlength}} matInput type="text" [placeholder]="placeholder" [formControl]="myControl" [readonly]="readonly" (blur)="onInputBlur()">
+            <input autocomplete="off" *ngIf="type=='password'" maxlength={{maxlength}} matInput type="password" [placeholder]="placeholder" [formControl]="myControl" [readonly]="readonly" (blur)="onInputBlur()">
+
+            <textarea *ngIf="type==='textarea'" [placeholder]="placeholder" matInput #autosize="cdkTextareaAutosize" cdkTextareaAutosize [cdkAutosizeMinRows]="textareaMinRows" cdkAutosizeMaxRows="10" [formControl]="myControl" [readonly]="readonly"></textarea>
+            <mat-chip-list *ngIf="type==='list'" #chipList>
+                <mat-chip *ngFor="let item of listValues" [selectable]="true" [removable]="true" (removed)="removeListItem(item)">
+                    {{item}}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+                <input [placeholder]="placeholder" autocomplete="off" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true" (matChipInputTokenEnd)="add($event)" (blur)="onInputBlur()">
+            </mat-chip-list>
+            <mat-icon matSuffix *ngIf="icon!=''">{{icon}}</mat-icon>
+        </mat-form-field>
+    </form>
+<!--    <dv-select *ngIf="type==='boolean'" [floatLabel]="floatLabel" [placeholder]="placeholder" [defaultValue]="defaultValue" (selectionChange)="boolChanged($event)" [selectOptions]="booleanOptions"></dv-select>-->
+</div>

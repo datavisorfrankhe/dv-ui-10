@@ -1,0 +1,48 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "importHelpers": true,
+    "skipLibCheck": true,
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "downlevelIteration": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": ["es6", "es7", "es2017", "dom"],
+    "module": "esnext",
+    "types": [],
+    "baseUrl": ".",
+    "paths": {
+      "*": ["*", "node_modules/*"],
+      "@src/*": ["src/*"],
+      "@app/*": ["src/app/*"],
+      "@modules/*": ["src/app/modules/*"],
+      "@main/*": ["src/app/modules/main/*"],
+      "@shared/*": ["src/app/modules/shared/*"],
+      "@services/*": ["src/app/modules/shared/services/*"],
+      "@utils/*": ["src/utils/*"],
+      "@const/*": ["src/const/*"],
+      "@knowledge-graph/*": ["src/app/modules/knowledge-graph/*"],
+      "@feature-platform/*": ["src/app/modules/feature-platform/*"],
+      "@uml-essentials/*": ["src/app/modules/uml-essentials/*"],
+      "@rules-engine/*": ["src/app/modules/rules-engine/*"],
+      "@case-management/*": ["src/app/modules/main/case-management/*"],
+      "@insight-center/*": ["src/app/modules/insight-center/*"],
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/test.ts",
+    "src/**/*.spec.ts"
+  ]
+}

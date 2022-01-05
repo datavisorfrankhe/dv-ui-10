@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="30px" viewBox="0 0 24 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 2</title>
+    <g id="Label-Management-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="CREATE-LABEL---UPDATED---USER-ID" transform="translate(-104.000000, -373.000000)" fill="currentColor" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(104.000000, 373.000000)">
+                <path d="M0,14.4 L0,20.8 L0,20.8 C0,23.4413 2.1587,25.6 4.8,25.6 L8,25.6 L8,29.6 L12.7142006,25.5592566 C13.1335265,25.1998345 13.182088,24.5685345 12.8226659,24.1492086 C12.7893412,24.1103298 12.7530794,24.0740681 12.7142006,24.0407434 L8,20 L8,20 L8,24 L4.8,24 C3.0237,24 1.6,22.5763 1.6,20.8 L1.6,14.4 C1.6,13.9581722 1.2418278,13.6 0.8,13.6 C0.3581722,13.6 -5.41083001e-17,13.9581722 0,14.4 Z" id="Path"></path>
+                <path d="M6.4,2 L6.4,15.6 C6.4,16.7045695 7.2954305,17.6 8.4,17.6 L22,17.6 C23.1045695,17.6 24,16.7045695 24,15.6 L24,2 C24,0.8954305 23.1045695,-2.02906125e-16 22,0 L8.4,0 C7.2954305,2.02906125e-16 6.4,0.8954305 6.4,2 Z M8,1.6 L14.4,1.6 L14.4,16 L8,16 L8,1.6 Z M16,1.6 L22.4,1.6 L22.4,16 L16,16 L16,1.6 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

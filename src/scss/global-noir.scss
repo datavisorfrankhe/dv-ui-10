@@ -1,0 +1,253 @@
+@import 'variables';
+
+.noir {
+    .component-container {
+
+    }
+
+    .mat-checkbox-frame {
+        border-color: $NOIR015;
+    }
+
+    .site {
+        background: $NOIR_BODY_BG;
+    }
+
+    .dv-page-title,
+    .mat-dialog-container .title {
+        //color: $NOIR_PAGE_TITLE;
+    }
+
+    .component-body {
+        background-color: $NOIR_BODY_BG;
+    }
+
+    .mat-dialog-container {
+        background-color: $NOIR_PANEL_BG;
+        color: white;
+    }
+
+    .mat-button-toggle:not(.mat-button-toggle-checked) {
+        color: white;
+    }
+
+    .mat-divider-vertical {
+        border-right-color: $NOIR_DIVIDER;
+    }
+
+    .mat-divider {
+        border-top-color: $NOIR_DIVIDER;
+    }
+
+    .mat-icon {
+        color: $NOIR_ICON;
+
+        &.suggested {
+            color: $INDICATOR_COLOR;
+        }
+
+        &.back {
+            color: white;
+        }
+    }
+
+    .mat-form-field-appearance-legacy .mat-form-field-label {
+        color: white;
+    }
+
+    .dv-form-field {
+        .mat-form-field-label {
+            color: $NOIR_BODY;
+        }
+    }
+
+    .mat-focused .placeholder {
+        color: transparent;
+    }
+
+    input {
+        caret-color: white;
+    }
+
+    input[type="time"]::-webkit-calendar-picker-indicator{
+        filter: invert(1);
+    }
+
+    .inline {
+        .mat-form-field-wrapper {
+            padding: 0;
+        }
+    }
+
+    .mat-paginator {
+        background-color: transparent;
+        color: white;
+
+        .mat-paginator-page-size {
+            display: none;
+        }
+
+        .mat-button-wrapper {
+            color: white;
+        }
+    }
+
+    .mat-select-value-text {
+        color: white;
+    }
+
+    .c3-axis-x text,
+    .c3-axis-y text {
+        fill: #FFFFFF;
+    }
+
+    .c3-ygrids line {
+        stroke: $NOIR_DIVIDER;
+    }
+
+    .c3-axis-x .domain {
+        stroke: $NOIR_DIVIDER;
+    }
+
+    .mat-datepicker-toggle-default-icon {
+        fill: #FFFFFF;
+        font-size: 20px;
+    }
+
+    .additional-text {
+        color: $NOIR_ADDITIONAL_TEXT;
+    }
+
+    .full-size .mat-dialog-container {
+        background-color: $NOIR_BODY_BG!important;
+    }
+
+    .mat-button[disabled],
+    .mat-icon-button[disabled],
+    .mat-fab.mat-accent[disabled],
+    .mat-fab.mat-primary[disabled],
+    .mat-fab.mat-warn[disabled],
+    .mat-fab[disabled],
+    .mat-flat-button.mat-accent[disabled],
+    .mat-flat-button.mat-primary[disabled],
+    .mat-flat-button.mat-warn[disabled],
+    .mat-flat-button[disabled],
+    .mat-mini-fab.mat-accent[disabled],
+    .mat-mini-fab.mat-primary[disabled],
+    .mat-mini-fab.mat-warn[disabled],
+    .mat-mini-fab[disabled],
+    .mat-raised-button.mat-accent[disabled],
+    .mat-raised-button.mat-primary[disabled],
+    .mat-raised-button.mat-warn[disabled],
+    .mat-raised-button[disabled] {
+        color: white;
+    }
+
+    .userActionDialog .mat-dialog-container {
+        background: $K;
+        color: $GR012;
+        overflow: hidden;
+    }
+
+    .userActionDialog textarea {
+        //background-color: #283548;
+        color: #d2d8e7;
+    }
+    //config auto-complete
+    .mat-autocomplete-panel {
+        background: $NOIR_HL_BG;
+        mat-optgroup{
+            label{
+                color: $NOIR_BODY_TEXT;
+                text-decoration: underline;
+            }
+        }
+        .mat-option{
+            color: $NOIR_BODY_TEXT;
+            &:hover{
+                background: $NOIR_TABLE_ALTER
+            }
+        }
+        .mat-option.mat-selected:not(.mat-active):not(:hover) {
+            color: $LIGHT_PRIMARY;
+            background: $NOIR_TABLE_ALTER
+        }
+
+        // ! .bottom-button-wrapper is a custom class
+        .bottom-button-wrapper {
+            background: $NOIR_BODY_BG_DARKER;
+        }
+    }
+
+    button.secondaryButton {
+        border: 1px solid $NOIR014;
+        color: $NOIR_BODY_TEXT !important;
+        border-radius: 4px;
+        background-color: $NOIR014;
+    }
+
+    /*access control user view popup related */
+
+    .mat-menu-panel {
+        background: $DK;
+    }
+
+    .ac-user-view-extra-option-menu .btnRow:hover {
+        background-color: $K;
+    }
+
+    .tc_simplifiedView{
+
+    }
+
+    .dv-mat-table {
+        color: white;
+
+        .mat-row {
+            background-color: $NOIR_PANEL_BG;
+        }
+
+        .mat-header-cell {
+            color: $NOIR019;
+        }
+
+        .mat-cell {
+            color: white;
+            border-bottom-color: $NOIR_BODY_BG;
+        }
+    }
+
+    .mat-form-field {
+        .mat-form-field-underline {
+            background-color: $NOIR_FIELD;
+        }
+    }
+
+    .mat-radio-button .mat-radio-outer-circle {
+        border-color: $NOIR_FIELD;
+    }
+
+    ::placeholder {
+        color: $GR014;
+        opacity: 0.7; /* Firefox */
+    }
+
+    .panel-container{
+        background-color: $NOIR_PANEL_BG;
+        .panel-highlight{
+            background-color: $NOIR_PANEL_CRACK;
+        }
+    }
+
+    .nonClickableTableCell{
+        cursor: default;
+        &:hover{
+            text-decoration: none !important;
+        }
+        color: $LIGHT_BG001;
+    }
+
+    .mat-tab-header-pagination-chevron {
+        border-color: $NOIR_BODY_TEXT;
+    }
+}

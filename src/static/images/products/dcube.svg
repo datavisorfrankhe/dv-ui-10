@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
+    <title>dCube Dark</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="scale(1.025)">
+        <g id="Apple-TV" transform="translate(-202.000000, -611.000000)">
+            <g id="dCube-Dark" transform="translate(208.000000, 608.000000)">
+                <g id="Group-2" transform="translate(0.000000, 9.000000)">
+                    <path d="M93.5,-2.30940108 L171.741324,42.8632487 C172.978929,43.5777798 173.741324,44.8982879 173.741324,46.3273503 L173.741324,136.67265 C173.741324,138.101712 172.978929,139.42222 171.741324,140.136751 L93.5,185.309401 C92.2623957,186.023932 90.7376043,186.023932 89.5,185.309401 L11.2586756,140.136751 C10.0210712,139.42222 9.25867555,138.101712 9.25867555,136.67265 L9.25867555,46.3273503 C9.25867555,44.8982879 10.0210712,43.5777798 11.2586756,42.8632487 L89.5,-2.30940108 C90.7376043,-3.02393226 92.2623957,-3.02393226 93.5,-2.30940108 Z" id="Polygon-Copy-5" stroke="#FFFFFF" stroke-width="6" fill="#FFFFFF"></path>
+                    <polygon id="Polygon" fill="#A1D683" points="131.120662 114.375 170.741324 91.5 170.741324 137.25 131.120662 160.125"></polygon>
+                    <polygon id="Polygon-Copy-3" fill="#95D4E9" points="170.740662 45.75 170.740662 91.5 131.12 68.625 131.12 22.875"></polygon>
+                    <polygon id="Polygon" fill="#6DBE4B" points="131.120662 68.625 170.741324 45.75 170.741324 91.5 131.120662 114.375"></polygon>
+                    <polygon id="Polygon-Copy-2" fill="#A1D683" points="51.88 22.875 91.5006622 -1.29802419e-13 91.5006622 45.75 51.88 68.625"></polygon>
+                    <polygon id="Polygon" fill="#6DBE4B" points="91.5 91.5 131.120662 68.625 131.120662 114.375 91.5 137.25"></polygon>
+                    <polygon id="Polygon-Copy-4" fill="#95D4E9" points="12.26 45.755 51.8806622 22.88 51.8806622 68.63 12.26 91.505"></polygon>
+                    <polygon id="Polygon" fill="#6DBE4B" points="131.120662 114.375 131.120662 160.125 91.5 183 91.5 137.25"></polygon>
+                    <polygon id="Polygon" fill="#011E41" points="91.5 137.25 91.5 183 51.8793378 160.125 51.8793378 114.375"></polygon>
+                    <polygon id="Polygon" fill="#95D4E9" points="51.8793378 160.125 12.2586756 137.25 12.2586756 91.5 51.8793378 114.375"></polygon>
+                    <polygon id="Polygon" fill="#F3EFA1" points="91.5 91.5 91.5 137.25 51.8793378 114.375 51.8793378 68.625"></polygon>
+                    <polygon id="Polygon" fill="#011E41" points="51.8793378 114.375 12.2586756 91.5 12.2586756 45.75 51.8793378 68.625"></polygon>
+                    <polygon id="Polygon-Copy" fill="#6DBE4B" points="131.120662 68.625 91.5 45.75 91.5 -6.55552002e-14 131.120662 22.875"></polygon>
+                    <line x1="91.5006622" y1="137.25" x2="173.338799" y2="90.0051042" id="Line" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <line x1="91.7586756" y1="91.5" x2="170.741324" y2="45.75" id="Line-7" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <line x1="91.7586756" y1="91" x2="12.2586756" y2="45.75" id="Line-8" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <line x1="91.7586756" y1="137.25" x2="9.65848663" y2="90.0036649" id="Line-2" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <line x1="51.8793378" y1="20.3047106" x2="51.8793378" y2="162.004115" id="Line-4" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <line x1="91.7586756" y1="0" x2="91.7586756" y2="183" id="Line-5" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <line x1="131.120662" y1="20.3047106" x2="131.120662" y2="162.004115" id="Line-6" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

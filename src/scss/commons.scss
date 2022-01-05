@@ -1,0 +1,591 @@
+@import 'variables';
+@import 'user_variables';
+
+.mat-button-toggle-checked {
+    background-color: $B;
+    color: white !important;
+}
+
+.mat-button-toggle {
+    border: solid 1px $B;
+    color: $B;
+}
+
+.mat-flat-button {
+    border: solid 1px $B;
+    background-color: $B;
+    color: white;
+}
+
+.mat-button {
+    color: $GR003;
+}
+
+.mat-stroked-button {
+    border: solid 1px $B;
+    color: $B;
+}
+
+.dv-headline {
+    font-size: 24px;
+}
+
+.dv-title {
+    font-size: 20px;
+}
+
+.dv-subheadline {
+    font-size: 16px;
+}
+
+.dv-body {
+    font-size: 14px;
+}
+
+.dv-caption {
+    font-size: 12px;
+}
+
+.clearfix {
+    clear: both;
+}
+/*below part is used to config noir style for the chart*/
+:host-context(.noir) ::ng-deep {
+    //dropdown text color
+    .mat-select-value-text {
+        color: $NOIR018;
+    }
+
+    .c3-grid line {
+        stroke: $dividerLines_noir;
+    }
+
+    .c3-tooltip td {
+        color: $DK;
+    }
+
+    .c3-legend-item {
+        fill: $NOIR_ADDITIONAL_TEXT;
+    }
+
+    .c3-axis-y {
+        .tick {
+            stroke: $GR006;
+        }
+
+        .domain {
+            stroke: $GR006;
+        }
+    }
+
+    .c3-axis-y-label {
+        stroke: $GR006;
+        letter-spacing: 1px;
+    }
+
+    .c3-axis-x-label {
+        stroke: $GR006;
+        letter-spacing: 1px;
+    }
+
+    .c3-axis-y2 {
+        .tick {
+            stroke: $GR006;
+        }
+
+        .domain {
+            stroke: $GR006;
+        }
+    }
+
+    .c3-axis-y2-label {
+        stroke: $GR006;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .c3-axis-x {
+        .tick {
+            stroke: $GR006;
+        }
+
+        .domain {
+            stroke: $dividerLines_noir;
+        }
+    }
+}
+
+::ng-deep {
+    .userSummaryReviewsPopup {
+        .title {
+            font-weight: bold;
+            margin: 5px;
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            height: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+
+            tr {
+                th{
+                    text-align: left;
+                }
+                td:nth-child(3) {
+                    width: 120px;
+                }
+
+                &:nth-child(even) {
+                    background: #ccc;
+                }
+            }
+        }
+        width: 500px;
+        max-height: 300px;
+        overflow: auto;
+    }
+}
+/*below part is used to config noir style for the chart*/
+:host-context(.light) ::ng-deep .dvChart {
+    .c3-grid line {
+        stroke: $dividerLines_light;
+    }
+}
+
+:host-context(.noir) .widgetWrapper {
+    background-color: $WidgetDKBG;
+    color: $GR006;
+}
+
+:host-context(.light) .widgetWrapper {
+    background: $GR009;
+}
+
+:host-context(.noir) ::ng-deep {
+    .inputWrapper {
+        i {
+            color: $B;
+        }
+    }
+}
+
+.dvBtnRegular {
+    padding: 5px 15px;
+    border: solid 1px $GR002;
+    cursor: pointer;
+}
+
+.dvBtnPrimary {
+    background-color: $B;
+    color: white;
+}
+
+.dvBtnSecondPrimary {
+    background-color: $SECONDARY_BTN_CLR;
+    color: white;
+}
+
+.dvBtnBorder {
+    border: solid 2px $NOIR015;
+}
+
+.radius18 {
+    border-radius: 18px;
+}
+
+:host-context(.noir) {
+    .dvBtnRegular {
+        background: $GR015;
+        border: solid 1px $GR016;
+
+        &:hover {
+            background: $GR016;
+        }
+    }
+
+    .dvBtnPrimary {
+        background-color: $B;
+        color: white;
+    }
+
+    .dvBtnBorder {
+        border: solid 2px $NOIR015;
+    }
+
+    ::ng-deep {
+        // This is affecting all the places
+        .mat-form-field-flex {
+            border-bottom: solid 2px $B014;
+        }
+
+        .mat-tab-header {
+            border-bottom: 1px solid $DK;
+        }
+    }
+}
+/*below is to control the scroll bar style*/
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+:host-context(.light) {
+    .basicIconButton {
+        color: rgba(0, 0, 0, 0.87);
+
+        .mat-icon {
+            color: rgba(0, 0, 0, 0.87);
+        }
+    }
+}
+
+.basicIconButton {
+    padding: 0 10px;
+    color: #6279ac;
+    border: none;
+    margin-right: 10px;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 2px;
+
+    .mat-icon {
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        color: $NOIR016;
+    }
+
+    &.invisible {
+        opacity: 0;
+    }
+
+    &[disabled] {
+        opacity: 0.5;
+    }
+}
+
+button {
+    text-transform: uppercase;
+
+    &.primaryButton {
+        background-color: $B002;
+        color: white;
+    }
+
+    &.secondaryButton {
+        background-color: $NOIR017;
+        color: white;
+    }
+
+    &.alertButton {
+        background-color: $LIGHT_REASON_CODE;
+    }
+
+    &.basicButton {
+        color: $GR014;
+    }
+
+    &.basicButtonWithBorder {
+        border: solid 1px $NOIR017;
+    }
+
+    &.basicPrimaryButtonWithBorder {
+        border: solid 1px $B;
+
+        mat-icon {
+            color: $B;
+        }
+    }
+    :host-context(.light) &.basicPrimaryButtonWithBorder{
+        color: $GR017;
+    }
+    :host-context(.noir) &.basicPrimaryButtonWithBorder{
+        color: $GR014;
+    }
+    &.basicPrimaryButton {
+        color: $B !important;
+
+        mat-icon {
+            color: $B;
+            margin-right: 20px;
+        }
+    }
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+button {
+    text-transform: uppercase;
+}
+
+::ng-deep {
+    .mat-tab-header {
+        border-bottom: 1px solid $GR014;
+    }
+}
+
+.error {
+    color: $ERROR;
+}
+
+mat-icon {
+    vertical-align: middle;
+
+    &.small {
+        height: 16px;
+        width: 16px;
+        min-width: 16px;
+        border-radius: 2px;
+        margin-right: 5px;
+        margin-top: -6px;
+    }
+}
+// Yixiang's style
+
+:host-context(.light) {
+    ::ng-deep {
+        .primary-hollow-button,
+        .primary-hollow-button-icon {
+            color: $LIGHT_BODY_TEXT;
+        }
+    }
+}
+
+.primary-button {
+    height: 36px;
+    border-radius: 3px;
+    background-color: $B;
+    color: $B001;
+}
+
+.primary-hollow-button {
+    height: 36px;
+    border-radius: 3px;
+    background-color: inherit;
+    color: $B001;
+    border: 2px solid $B;
+
+    ::ng-deep {
+        .mat-button-wrapper {
+            height: 32px;
+        }
+    }
+}
+
+.primary-hollow-no-border-button {
+    height: 36px;
+    border:none;
+    background-color: inherit;
+    color: $B;
+
+    ::ng-deep {
+        .mat-button-wrapper {
+            height: 32px;
+        }
+    }
+}
+
+.primary-button-icon-nobackground {
+    height: 36px;
+    border-radius: 3px;
+    color: $B;
+    letter-spacing: 0.5px;
+    padding: 0 20px 0 8px;
+
+    ::ng-deep {
+        .mat-button-wrapper {
+            display: inline-flex;
+
+            i {
+                display: inline-flex;
+                height: 36px;
+                width: 32px;
+                margin-right: 10px;
+                font-size: 28px;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.primary-button-icon {
+    height: 36px;
+    border-radius: 3px;
+    background-color: $B;
+    color: $B001;
+    letter-spacing: 0.5px;
+    padding: 0 20px 0 8px;
+
+    ::ng-deep {
+        .mat-button-wrapper {
+            display: inline-flex;
+
+            i {
+                display: inline-flex;
+                height: 36px;
+                width: 32px;
+                margin-right: 20px;
+                font-size: 28px;
+                align-items: center;
+                border-right: 1px solid rgba(255, 255, 255, 0.25);
+            }
+        }
+    }
+}
+
+.primary-hollow-blue-button-icon {
+    height: 36px;
+    border-radius: 3px;
+    border: 2px solid $B;
+    background-color: inherit;
+    color: $B;
+    letter-spacing: 0.5px;
+    padding: 0 20px 0 8px;
+
+    ::ng-deep {
+        .mat-button-wrapper {
+            height: 100%;
+            display: inline-flex;
+
+            i {
+                display: inline-flex;
+                height: 36px;
+                width: 32px;
+                color: $B;
+                margin-right: 0;
+                font-size: 28px;
+                align-items: center;
+            }
+        }
+
+        .material-icons {
+            margin-right: 8px;
+        }
+    }
+}
+
+.primary-hollow-button-icon {
+    height: 36px;
+    border-radius: 3px;
+    border: 2px solid $B;
+    background-color: inherit;
+    color: $B001;
+    letter-spacing: 0.5px;
+    padding: 0 20px 0 8px;
+
+    ::ng-deep {
+        .mat-button-wrapper {
+            height: 100%;
+            display: inline-flex;
+
+            i {
+                display: inline-flex;
+                height: 36px;
+                width: 32px;
+                color: $B;
+                margin-right: 20px;
+                font-size: 28px;
+                align-items: center;
+            }
+
+            mat-icon {
+                display: inline-flex;
+                height: 20px;
+                width: 20px;
+                margin-right: 20px;
+                font-size: 28px;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.primary-button-icon:disabled,
+primary-button-icon[disabled] {
+    background-color: $B;
+    opacity: 0.7;
+    color: $B001;
+    cursor: not-allowed;
+}
+
+.bottom-list {
+    border: none;
+    color: $B;
+    font-size: 12px;
+
+    ::ng-deep {
+        .mat-button-wrapper {
+            i {
+                margin-right: 8px;
+                height: 20px;
+                width: 20px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+::ng-deep {
+    .dv-tooltip-multiline {
+        white-space: pre-line;
+    }
+    .mat-select-content {
+        .additionalBottomButton {
+            color: $B;
+            margin-left: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+.mat-button {
+    color: inherit !important;
+}
+
+.noScrollBar{
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        width: 0px;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+    /* Optional: show position indicator in red */
+    &::-webkit-scrollbar-thumb {
+        background: #FF0000;
+    }
+}
+
+::ng-deep {
+    .dv-tooltip-icon {
+        top: 0px;
+    }
+    .mat-tab-label.mat-tab-disabled {
+        color: unset;
+        opacity: .3;
+        cursor: not-allowed;
+    }
+    .c3-legend-background {
+        fill: transparent;
+        stroke: transparent;
+    }
+    .c3-legend-item-hidden{
+        opacity: 0.5 !important;
+    }
+}

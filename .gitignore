@@ -1,0 +1,11 @@
+dist/*
+node_modules/*
+dist/**
+src/static/comps/datavisor-components.js.map
+src/static/comps/datavisor-vendors.js.map
+#dv-ui/src/static/comps/datavisor-components.js
+src/static/comps/datavisor-components.min.js.map
+src/static/comps/datavisor-vendors.min.js.map
+*Chrome*
+package-lock.json
+coverage/*

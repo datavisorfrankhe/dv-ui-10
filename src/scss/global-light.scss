@@ -1,0 +1,139 @@
+@import 'variables';
+
+.light {
+    .site {
+        background: $LIGHT_BODY_BG;
+    }
+
+    .dv-page-title,
+    .mat-dialog-container .title {
+        //color: $LIGHT_PAGE_TITLE;
+    }
+
+    .component-body {
+        background-color: $LIGHT_BODY_BG;
+    }
+
+    .mat-button-toggle-group.primary {
+        color: $B;
+    }
+
+    .mat-icon {
+        color: $LIGHT_ICON;
+
+        &.suggested {
+            color: $INDICATOR_COLOR;
+        }
+    }
+
+    .additional-text {
+        color: $LIGHT_ADDITIONAL_TEXT;
+    }
+
+    .full-size .mat-dialog-container {
+        background-color: $LIGHT_BODY_BG!important;
+    }
+
+    .userActionDialog .reviewWrapper textarea {
+        width: 99% !important;
+        color: #262e3a !important;
+    }
+
+    .userActionDialog .reviewWrapper .btnWrapper {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    // config auto-complete
+    .mat-autocomplete-panel {
+        mat-optgroup{
+            label{
+                color:  $LIGHT_BODY_TEXT;
+                text-decoration: underline;
+            }
+        }
+        .mat-option {
+            color: $LIGHT_BODY_TEXT;
+            &:hover {
+                background: $LIGHT_BODY_BG
+            }
+        }
+
+        .mat-option.mat-selected:not(.mat-active):not(:hover) {
+            color: $B;
+            background: $LIGHT_BODY_BG
+        }
+
+        // ! .bottom-button-wrapper is a custom class
+        .bottom-button-wrapper {
+            background: $LIGHT_PANEL_BG;
+        }
+    }
+
+    button.secondaryButton {
+        border: 1px solid $GR014;
+        color: $LIGHT_BODY_TEXT !important;
+        border-radius: 4px;
+        background-color: $GR014;
+    }
+
+    .mat-menu-panel {
+        background: $LIGHT_PANEL_BG;
+    }
+
+    .ac-user-view-extra-option-menu .btnRow:hover {
+        background-color: $LIGHT_HL_BG;
+    }
+
+    .tc_simplifiedView{
+
+    }
+
+    // dv-slider
+    .dv-slider {
+        &.mat-slider-min-value.mat-slider-thumb-label-showing .mat-slider-thumb-label {
+            background-color: $B;
+        }
+
+        &.mat-slider-min-value .mat-slider-thumb {
+            background-color: $B;
+        }
+
+        .mat-slider-track-wrapper .mat-slider-track-background {
+            background-color: $LIGHT_DIVIDER;
+        }
+
+        &:not(.mat-slider-disabled).cdk-focused.mat-slider-thumb-label-showing .mat-slider-thumb {
+            transform: scale(1);
+        }
+    }
+
+    .dv-mat-table {
+        .mat-row {
+            background-color: $LIGHT_PANEL_BG;
+        }
+
+        .mat-cell {
+            border-bottom-color: $LIGHT_BODY_BG;
+        }
+    }
+
+    .panel-container{
+        background-color: $LIGHT_PANEL_BG;
+        .panel-highlight{
+            background-color: $LIGHT_PANEL_CRACK;
+        }
+    }
+
+    .nonClickableTableCell{
+        cursor: default;
+        &:hover{
+            text-decoration: none !important;
+        }
+        color: $DK;
+    }
+
+    .mat-tab-header-pagination-chevron {
+        border-color: $LIGHT_BODY_TEXT;
+    }
+}

@@ -1,0 +1,7 @@
+body{
+    background-color: inherit;
+}
+
+.nav-list > li > a, .nav-list .nav-header{
+    text-shadow: none;
+}
