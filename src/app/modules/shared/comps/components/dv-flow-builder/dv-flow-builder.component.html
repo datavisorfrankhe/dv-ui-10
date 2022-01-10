@@ -1,0 +1,90 @@
+<div class="wrapper">
+    <div class='left'>
+
+        Available Types
+
+        <div class='typesWrapper'>
+
+            <div *ngFor="let type of droppableElementTypes.droppableElementTypes" class="typeWrapper" mwlDraggable [dropData]="type" dragActiveClass="drag-active">
+                {{type.label}}
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class='right'>
+
+        <button (click)="start()">Start</button>
+
+        <div class='controllers'>
+            <button (click)="zoomOut()">+</button>
+            <button (click)="zoomIn()">-</button>
+            <i class="material-icons" (click)="undo()" [ngClass]="{'disabled': graphActions.empty}" matTooltip="Undo">undo</i>
+            <i class="material-icons" (click)="redo()" [ngClass]="{'disabled': redoActions.empty}" matTooltip="Redo">redo</i>
+            <i class="material-icons" (click)="reset()" matTooltip="Reset">autorenew</i>
+        </div>
+
+        <div class='newArea' mwlDroppable (drop)="dropMe($event.dropData)"> Add New</div>
+
+
+        <div class="graphWrapper">
+
+            <ngx-graph *ngIf="loaded" #dvGraph [links]="edges" [nodes]="nodes" [curve]="curve" [layout]="layout" [autoCenter]="true" [layoutSettings]="layoutSettings" [enableZoom]="zoomable" [autoZoom]="true">
+                <ng-template #defsTemplate>
+                    <svg:marker id="arrow" viewBox="0 -5 10 10" refX="8" refY="0" markerWidth="10" markerHeight="10" orient="auto" (click)="clickedLine(link)">
+                        <svg:path d="M0,-5L10,0L0,5" class="arrow-head" />
+                    </svg:marker>
+                </ng-template>
+
+                <ng-template #nodeTemplate let-node>
+
+                    <svg:g class="node" xmlns="http://www.w3.org/2000/xhtml">
+                        <svg:foreignObject *ngIf="!node.data.standAlone" width="160" height="42">
+                            <xhtml:div data-id={{node.id}} class="droppableContainer" xmlns="http://www.w3.org/1999/xhtml" [ngClass]="{'highlighted': node.data.highlighted, 'clickable': nodeClickable}" (click)="nodeClick(node)">
+                                <span class="left dottedSeperator" mwlDroppable (drop)="dropBefore($event.dropData, node.data)"></span>
+                                <span class="right" mwlDroppable (drop)="dropAfter($event.dropData, node.data)"></span>
+                                <span class="material-icons edit" (click)="delete(node, $event)">delete_forever</span>
+                                <span class="material-icons delete" (click)="edit(node)">edit</span>
+                                <label class="name">
+                                        <span class="title">{{node.label}}</span>
+                                     </label>
+                                <span class="material-icons select" (click)="toggleSelector(node, $event)">
+                                        {{ openedSelector === node.id ? 'arrow_drop_up':'arrow_drop_down'}}
+                                     </span>
+
+                            </xhtml:div>
+                        </svg:foreignObject>
+
+                        <svg:foreignObject *ngIf="node.data.standAlone" width="160" height="42" mwlDraggable [dropData]="node" (drop)="drop($event.dropData, node.data)">
+                            <xhtml:div class="droppableContainer" xmlns="http://www.w3.org/1999/xhtml" [ngClass]="{'highlighted': node.data.highlighted, 'clickable': nodeClickable}" (click)="nodeClick(node)">
+                                <span class="left" mwlDroppable (drop)="dropBefore($event.dropData, node.data)"></span>
+                                <span class="right" mwlDroppable (drop)="dropAfter($event.dropData, node.data)"></span>
+                                <span class="material-icons edit" (click)="delete(node, $event)">delete_forever</span>
+                                <span class="material-icons delete" (click)="edit(node)">edit</span>
+                                <label class="name">
+                                        <span class="title">{{node.label}}</span>
+                                     </label>
+
+                            </xhtml:div>
+                        </svg:foreignObject>
+
+                    </svg:g>
+                </ng-template>
+
+                <ng-template #linkTemplate let-link>
+                    <svg:g class="edge" (click)="clickedLine(link)">
+                        <svg:path class="line" stroke-width="1" marker-end="url(#arrow)">
+                        </svg:path>
+                    </svg:g>
+                </ng-template>
+
+            </ngx-graph>
+        </div>
+
+<!--        <div class="selectorWrapper" [hidden]="openedSelector===''">-->
+<!--            <auto-complete [data]="selectOptions" (onChange)="valueSelected($event)"></auto-complete>-->
+<!--        </div>-->
+
+    </div>
+</div>

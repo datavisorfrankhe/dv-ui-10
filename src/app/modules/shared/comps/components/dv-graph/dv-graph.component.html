@@ -1,0 +1,75 @@
+<div *ngIf="loaded" style="width:100%;height:100%">
+    <!-- <button (click)="zoomIn()">+</button>
+    <button (click)="zoomOut()">-</button> -->
+    <ngx-graph #dvGraph [links]="edges" [nodes]="nodes" [curve]="curve" [layout]="layout" [autoCenter]="true"
+        [layoutSettings]="layoutSettings" [enableZoom]="zoomable" [zoomSpeed]="zoomSpeed" [autoZoom]="true"
+        [minZoomLevel]="minZoomLevel" [maxZoomLevel]="maxZoomLevel">
+        <ng-template #defsTemplate>
+            <svg:marker id="arrow" viewBox="0 -5 10 10" refX="8" refY="0" markerWidth="10" markerHeight="10" orient="auto" (click)="clickedLine(link)">
+                <svg:path *ngIf="!droppable" d="M0,-5L10,0L0,5" class="arrow-head" />
+                <svg:path *ngIf="droppable" d="M0,-5L10,0L0,5" class="arrow-head-droppable" />
+            </svg:marker>
+        </ng-template>
+
+        <ng-template #nodeTemplate let-node>
+            <svg:g class="node" xmlns="http://www.w3.org/2000/xhtml">
+                <svg:foreignObject width="250" height="60"  *ngIf="!droppable">
+                    <xhtml:div
+                     *ngIf="!droppable"
+                     class="cardContainer" xmlns="http://www.w3.org/1999/xhtml" [ngClass]="{'highlighted': node.data.highlighted, 'clickable': nodeClickable}" (click)="nodeClick(node)">
+                        <span class="material-icons copy_icon" (click)="copy(node)" [matTooltip]="copyToolTip">content_copy</span>
+                        <span class="material-icons more_icon" (click)="showMore(node)" [matTooltip]="moreToolTip">more</span>
+                        <label class="category" *ngIf="node.data.category">{{node.data.category}}</label>
+                        <label class="name" [ngClass]="{'wider': !node.data.expandable, 'clickale': nodeClickable}">
+                            <span class="title" [matTooltip]="node.data.toolTip" matTooltipClass="dv-tooltip-multiline">{{node.label}}</span>
+                            <span *ngIf="node.data.childrenCount>0">
+                                ({{node.data.childrenCount}})
+                            </span>
+                        </label>
+                        <span class="material-icons exp_collap_icon" (click)="expand(node)" *ngIf="node.data.expandable && !node.data.expanded">add_circle</span>
+                        <span class="material-icons exp_collap_icon" (click)="collapse(node)" *ngIf="node.data.expandable && node.data.expanded">remove_circle</span>
+                    </xhtml:div>
+                </svg:foreignObject>
+                <!-- can not mame below draggable as well, as it will break the graph dragging effects -->
+                <!-- mwlDraggable [dropData]="node.data" -->
+                <svg:foreignObject width="160" height="80" *ngIf="droppable"
+                    mwlDroppable
+                    (drop)="drop($event.dropData, node.data)">
+                    <xhtml:div
+                     class="droppableContainer" xmlns="http://www.w3.org/1999/xhtml" [ngClass]="{'highlighted': node.data.highlighted, 'clickable': nodeClickable}" (click)="nodeClick(node)">
+                     <span class="material-icons copy_icon" (click)="copy(node)" [matTooltip]="copyToolTip">content_copy</span>
+
+                        <span class="material-icons edit" (click)="delete(node)" *ngIf="editable">delete_forever</span>
+                        <span class="material-icons delete" (click)="edit(node)" *ngIf="deletable">edit</span>
+
+
+                        <label class="name">
+                            <span class="title">{{node.label}}</span>
+                            <span *ngIf="node.data.childrenCount>0">
+                                ({{node.data.childrenCount}})
+                            </span>
+                        </label>
+                        <span class="material-icons exp_collap_icon" (click)="expand(node)" *ngIf="node.data.expandable && !node.data.expanded">add_circle</span>
+                        <span class="material-icons exp_collap_icon" (click)="collapse(node)" *ngIf="node.data.expandable && node.data.expanded">remove_circle</span>
+
+
+
+                    </xhtml:div>
+                </svg:foreignObject>
+
+
+            </svg:g>
+        </ng-template>
+
+        <ng-template #linkTemplate let-link>
+            <svg:g class="edge" *ngIf="!droppable">
+                <svg:path  class="line" stroke-width="1" marker-end="url(#arrow)">
+                </svg:path>
+            </svg:g>
+            <svg:g class="edge" *ngIf="droppable" (click)="clickedLine(link)">
+                <svg:path   class="line droppableLine" stroke-width="1" marker-end="url(#arrow)">
+                </svg:path>
+            </svg:g>
+        </ng-template>
+    </ngx-graph>
+</div>
