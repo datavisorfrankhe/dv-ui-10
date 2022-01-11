@@ -3,8 +3,9 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {DemoModule} from "@modules/demo/demo.module";
-import {SharedModule} from "@shared/shared.module";
+import {DemoModule} from '@modules/demo/demo.module';
+import {SharedModule} from '@shared/shared.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -12,6 +13,7 @@ import {SharedModule} from "@shared/shared.module";
     ],
     imports: [
         BrowserModule.withServerTransition({appId: 'serverApp'}),
+        BrowserAnimationsModule,
         AppRoutingModule,
         DemoModule,
         SharedModule

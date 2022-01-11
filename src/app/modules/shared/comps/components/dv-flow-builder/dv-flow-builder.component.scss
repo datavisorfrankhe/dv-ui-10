@@ -47,6 +47,7 @@
 
         .graphWrapper {
             width: 100%;
+            min-height: 800px;
             height: 100%;
             display: flex;
             justify-content: center;
@@ -104,7 +105,7 @@
 
             .delete {
                 top: 6px;
-                right:: 6px;
+                right: 6px;
             }
 
             .select {

@@ -49,9 +49,9 @@
             },
             "scripts": [
               "src/static/echarts.boxplot.min.js",
-              "../dv-ui/node_modules/colresizable/colResizable-1.6.min.js",
-              "../dv-ui/node_modules/papaparse/papaparse.js",
-              "../dv-ui/node_modules/marked/lib/marked.js",
+              "node_modules/colresizable/colResizable-1.6.min.js",
+              "node_modules/papaparse/papaparse.js",
+              "node_modules/marked/lib/marked.js",
               "node_modules/prismjs/prism.js",
               "node_modules/prismjs/components/prism-css.min.js",
               "node_modules/tether/dist/js/tether.min.js"
@@ -68,10 +68,11 @@
               "extractLicenses": true,
               "vendorChunk": true,
               "buildOptimizer": false,
-              "fileReplacements": [{
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.onprem.ts"
-              },
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.onprem.ts"
+                },
                 {
                   "replace": "src/index/index.html",
                   "with": "src/index/index.onprem.html"
@@ -92,10 +93,12 @@
               "extractLicenses": true,
               "vendorChunk": true,
               "buildOptimizer": false,
-              "fileReplacements": [{
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.production.ts"
-              }]
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.production.ts"
+                }
+              ]
             },
             "staging": {
               "optimization": true,
@@ -107,10 +110,12 @@
               "extractLicenses": true,
               "vendorChunk": true,
               "buildOptimizer": false,
-              "fileReplacements": [{
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.staging.ts"
-              }]
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.staging.ts"
+                }
+              ]
             }
           }
         },

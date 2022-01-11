@@ -19,7 +19,7 @@ declare var $: any;
 export class DvFlowBuilderComponent {
 
     @Input() dataList;
-    @Input() direction = 'TB';
+    @Input() direction = 'LR';
     @Output() onNodeClicked: EventEmitter<any> = new EventEmitter();
     @Output() onDrop: EventEmitter<any> = new EventEmitter();
     @Input() size = 800;
@@ -77,13 +77,13 @@ export class DvFlowBuilderComponent {
         } else {
             this.openedSelector = node.id;
         }
-        new Tether({
-            element: '.selectorWrapper',
-            target: e.target,
-            attachment: 'bottom right',
-            targetAttachment: 'top right',
-            targetOffset: '15px -160px'
-        });
+        // new Tether({
+        //     element: '.selectorWrapper',
+        //     target: e.target,
+        //     attachment: 'bottom right',
+        //     targetAttachment: 'top right',
+        //     targetOffset: '15px -160px'
+        // });
     }
     valueSelected(e) {
         this.dvFlowBuilderNodes.updateLabelFor(e[0].name, this.openedSelector);
@@ -153,7 +153,10 @@ export class DvFlowBuilderComponent {
             this.loaded = true;
             //enable drop node to node
             setTimeout(() => {
-                $('.droppableContainer').draggable();
+                $('.droppableContainer').draggable({
+                    helper: 'clone'
+                });
+
                 $('.droppableContainer').droppable({
                     drop: function(event, ui) {
                         console.log(event, ui, 'dropped left');

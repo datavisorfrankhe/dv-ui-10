@@ -35,7 +35,7 @@
     "@ckeditor/ckeditor5-build-inline": "^31.1.0",
     "@ngu/carousel": "^4.0.0",
     "@nguniversal/express-engine": "^10.0.2",
-    "@swimlane/ngx-graph": "^7.2.0",
+    "@swimlane/ngx-graph": "^8.0.0-rc.1",
     "@types/c3": "^0.7.8",
     "@types/jquery": "^3.5.11",
     "and": "0.0.3",
